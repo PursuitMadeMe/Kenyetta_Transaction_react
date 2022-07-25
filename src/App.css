@@ -2,12 +2,10 @@ h2{
   font-family: 'Edu VIC WA NT Beginner', cursive;
 
 }
-#NavBar{
-  font-family: 'Edu VIC WA NT Beginner', cursive;
+body{
   background-color: aqua;
 }
 
 .NavBar{
-  font-family: 'Edu VIC WA NT Beginner', cursive;
   background-color: aqua;
 }
