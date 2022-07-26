@@ -3,7 +3,7 @@ import React from 'react'
 function FourOFour() {
   return (
     <div>
-        <h1>Sorry No Budget</h1>
+        <h1>Sorry No Transaction</h1>
     </div>
   )
 }

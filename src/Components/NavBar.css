@@ -1,33 +1,35 @@
 .navbar {
-  background-color: rgb(93, 230, 173);
-  height: 150px;
+  background-color: rgb(99, 188, 151);
+  height: 200px;
   margin: auto;
-  border: 15px;
-  gap: 25px;
 }
 
 h1 {
+  
   justify-content: flex;
   padding-left: 250px;
 }
 
-.budget-button {
+.transaction-button {
   margin-top: 10px;
   margin-left: 75px;
-  background-color: greenyellow;
-  border-radius: 10px;
-  border: 1px solid;
-  font-style: bold;
-}
-
-.new-button {
-  justify-content: end;
-  margin-top: 10px;
-  margin-left: 75px;
-  background-color: greenyellow;
+  background-color: rgb(46, 208, 113);
   border: 1px solid;
   font-style: bold;
   height: 50px;
   width: 200px;
   text-align: center;
+}
+
+
+.new-button {
+  background: rgb(46, 208, 113);
+  justify-content: end;
+  margin-top: 10px;
+  margin-left: 75px;
+  border: 1px solid;
+  font-style: bold;
+  height: 50px;
+  width: 200px;
+  
 }

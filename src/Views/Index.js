@@ -1,11 +1,10 @@
 import React from 'react'
-import Budgets from '../Routes/Budgets.js'
+import Transactions from '../Components/Transactions.js'
 
 function Index() {
   return (
     <div className='Index'>
-    <h2>Index</h2>
-      <Budgets />
+      <Transactions />
     </div>
   )
 }

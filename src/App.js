@@ -29,10 +29,10 @@ function App() {
     <main>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/budgets' element={<Index />} />
-        <Route path='/budgets/new' element={<New />}/>
-        <Route path='budgets/:index' element={<Show />}/>
-        <Route path='budgets/:index/edit' element={<Edit />}/>
+        <Route path='/transactions' element={<Index />} />
+        <Route path='/transactions/new' element={<New />}/>
+        <Route path='transactions/:index' element={<Show />}/>
+        <Route path='transactions/:index/edit' element={<Edit />}/>
         <Route path='*' element={<FourOFour />}/>
       </Routes>
     </main>

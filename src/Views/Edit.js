@@ -1,11 +1,11 @@
 import React from 'react'
-import BudgetEditForm from '../Routes/BudgetEditForm'
+import TransactionEditForm from '../Components/TransactionEditForm'
 
 function Edit() {
   return (
     <div>
         <h2>Edit</h2>
-        <BudgetEditForm />
+        <TransactionEditForm />
     </div>
   )
 }

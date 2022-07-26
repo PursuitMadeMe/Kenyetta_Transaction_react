@@ -1,11 +1,11 @@
 import React from 'react'
-import BudgetNewForm from '../Routes/BudgetNewForm.js'
+import TransactionNewForm from '../Components/TransactionNewForm.js'
 
 function New() {
   return (
     <div className='New'>
     <h2>New</h2>
-        <BudgetNewForm />
+        <TransactionNewForm />
     </div>
   )
 }

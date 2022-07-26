@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
 import '../Components/NavBar.css'
 
+{/* NavBar visible on all pages link to transactions INDEX  and Form for New transaction*/}
 export default function NavBar(){
     return (
         <nav className="navbar">
-        <h1>Budget App</h1>
-            <button className="budget-button">
-            {/* NavBar visible on all pages link to budgets INDEX  and Form for New budget*/}
-                <Link to="/budgets">Kenyetta Budget</Link>
-            </button>
+        <h1>Transaction App</h1>
+            {/* <button className="transaction-button"> */}
+                <Link to="/transactions">Kenyetta Transaction</Link>
+            {/* </button> */}
             <button className="new-button">
-                <Link to="/budget/new">New Budget</Link>
+                <Link to="/transaction/new">NEW TRANSACTION</Link>
             </button>
         </nav>
     );
