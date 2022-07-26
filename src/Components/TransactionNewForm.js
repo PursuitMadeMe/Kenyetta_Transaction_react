@@ -10,6 +10,7 @@ import {useState} from 'react'
 
     
     function TransactionNewForm(){
+
     const [transaction, setTransaction] = useState({
         item_name:'',
         amout:'',
@@ -19,11 +20,11 @@ import {useState} from 'react'
     
     });
     
-    const navigate = useNavigate
+    const navigate = useNavigate()
     
     const addTransaction = ()=> {
-        axios.POST()`${API_URL}/transactions`, transaction
-        .then((res) => {navigate(`/transactions`)})
+        axios.post(`${API_URL}/transactions`, transaction)
+        .then((res) => navigate(`/transactions`))
         .catch((error) => console.error(error))
     }
     
@@ -49,6 +50,11 @@ import {useState} from 'react'
             <input id='amount' type='number' placeholder='Amount' onChange={handleTextChange}/>
             <label>From</label>
             <input id='from' type='text' placeholder='From' onChange={handleTextChange}/>
+
+            {/* NOT SURE */}
+            <label form='categories'>Choose a Category</label>
+            <select name='categories' id='categories'></select>
+
             {/* NOT TO SURE */}
             {/* Click on button  take you to a new page , with form to create new transaction */}
             <input type='button'onClick={handleOnClick}>CREATE NEW ITEM</input>

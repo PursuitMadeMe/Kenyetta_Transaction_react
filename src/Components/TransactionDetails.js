@@ -14,7 +14,7 @@ function TransactionDetails(){
         .then((res) => {setTransaction(res.data)})
         .catch(() => {navigate("/not-found");
         });
-    }, [index, navigate]);
+    }, [index]);
 
 return(
     <section>
