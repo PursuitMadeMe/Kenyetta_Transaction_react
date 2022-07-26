@@ -1,15 +1,14 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function Transaction({ transaction, index }) {
     return (
-        <tr className="Transaction">
-            <td>
-            </td>  
-            <td>
+        <div className="Transaction">
+           <ul>{`/transactions/${index}`}</ul>
+           <li>{transaction.date}<br></br>{transaction.item_name}<br></br>{transaction.amount}</li>
 
-                <Link to={`/transactions/${index}`}>{transaction.item_name}</Link>
-            </td>
-        </tr>
+                {/* <Link to={`/transactions/${index}`}>{transaction.item_name} {transaction.date}</Link> */}
+          
+        </div>
     );
 }
 
