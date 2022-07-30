@@ -1,7 +1,6 @@
 // import React from 'react'
 
 import { useState } from "react";
-
 import axios from "axios";
 
 import { useNavigate } from "react-router-dom";
@@ -16,9 +15,10 @@ function TransactionNewForm() {
     from: "",
     category: "",
   });
-
   const navigate = useNavigate();
 
+
+  // click on a button take me t
   const addTransaction = () => {
     axios
       .post(`${API_URL}/transactions`, transaction)
@@ -32,15 +32,18 @@ function TransactionNewForm() {
     setTransaction({ ...transaction, [e.target.id]: e.target.value });
   };
 
-  const handleOnClick = (e) => {
+  const handleNumberChange = (e) => {
+    setTransaction({...transaction, [e.target.id]: Number(e.target.value) })
+  }
+
+  const handleSubmit = (e) => {
     e.preventDefault();
     addTransaction();
   };
 
   return (
     <div className="new">
-      <form action="">
-        <fieldset>
+      <form onSubmit={handleSubmit} >
           <label>Add a new item</label>
           <label>Date</label>
           <input
@@ -49,26 +52,23 @@ function TransactionNewForm() {
             type="text"
             placeholder="Date"
             onChange={handleTextChange}
-            required 
           />
           <label>Name</label>
           <input
-            id="name"
+            id="item_name"
             value={transaction.item_name}
             type="text"
             placeholder="Name"
             onChange={handleTextChange}
-            required 
 
           />
           <label>Amount</label>
           <input
             id="amount"
-            value={transaction.amout}
+            value={transaction.amount}
             type="number"
             placeholder="Amount"
-            onChange={handleTextChange}
-            required 
+            onChange={handleNumberChange}
 
           />
           <label>From</label>
@@ -78,7 +78,6 @@ function TransactionNewForm() {
             type="text"
             placeholder="From"
             onChange={handleTextChange}
-            required 
 
           />
 
@@ -89,7 +88,7 @@ function TransactionNewForm() {
                  <option  value='Ssavings' >Savings</option>
              </select> */}
 
-          {/* NOT TO SURE */}
+          {/* NOT TO SURE -------------------------------------------------- */}
           {/* Click on button  take you to a new page , with form to create new transaction */}
 
           
@@ -98,11 +97,9 @@ function TransactionNewForm() {
             type="submit"
             className="form"
             value="submit"
-            onClick={handleOnClick}
           >
             CREATE NEW ITEM
           </button>
-        </fieldset>
       </form>
     </div>
   );

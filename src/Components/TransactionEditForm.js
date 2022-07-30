@@ -23,16 +23,23 @@ function TransactionEditForm() {
     setTransaction({ ...transaction, [event.target.id]: event.target.value });
   };
 
+  const handleNumberChange = (event) => {
+    setTransaction({
+      ...transaction,
+      [event.target.id]: Number(event.target.value),
+    });
+  };
+
   useEffect(() => {
     axios
       .get(`${API_URL}/transactions/${index}`)
       .then((res) => setTransaction(res.data))
       .catch((error) => console.error(error));
-  }, [index]);
+  }, []);
 
   const updateTransaction = () => {
     axios
-      .put(`${API_URL}/transactions ${index}`, transaction)
+      .put(`${API_URL}/transactions/${index}`, transaction)
       .then((res) => {
         setTransaction(res.data);
         navigate(`/transactions/${index}`);
@@ -44,54 +51,50 @@ function TransactionEditForm() {
     e.preventDefault();
     updateTransaction();
   };
+
   return (
-    <div className="new">
-      <form action="" onSubmit={handleSubmit} >
-        <fieldset>
-          <label>Add a new item</label>
-          <label>Date</label>
-          <input
-            id="date"
-            type="text"
-            placeholder="Date"
-            onChange={handleTextChange}
-          />
-          <label>Name</label>
-          <input
-            id="name"
-            type="text"
-            placeholder="Name"
-            onChange={handleTextChange}
-          />
-          <label>Amount</label>
-          <input
-            id="amount"
-            type="number"
-            placeholder="Amount"
-            onChange={handleTextChange}
-          />
-          <label>From</label>
-          <input
-            id="from"
-            type="text"
-            placeholder="From"
-            onChange={handleTextChange}
-          />
-          {/* NOT TO SURE */}
-          {/* Click on button  take you to a new page , with form to create new transaction */}
-          <br />
-          <input
-            type="submit"
-            className="form"
-            value="submit"  
-          >
-            CREATE NEW ITEM
-          </input>
-        </fieldset>
-        <Link to={`/transactions/${index}`}>
-        <button>BACK</button>
-        </Link>
+    <div className="edit">
+      <h1>Edit Transaction</h1>
+      <form onSubmit={handleSubmit}>
+        <h2>Add a new item</h2>
+        <label>Date</label>
+        <input
+          id="date"
+          value={transaction.date}
+          type="text"
+          placeholder="Date"
+          onChange={handleTextChange}
+        />
+        <label>Name</label>
+        <input
+          id="item_name"
+          value={transaction.item_name}
+          type="text"
+          placeholder="Name"
+          onChange={handleTextChange}
+        />
+        <label>Amount</label>
+        <input
+          id="amount"
+          value={transaction.amount}
+          type="number"
+          placeholder="Amount"
+          onChange={handleNumberChange}
+        />
+        <label>From</label>
+        <input
+          id="from"
+          value={transaction.category}
+          type="text"
+          placeholder="From"
+          onChange={handleTextChange}
+        />
+        <br />
+        <input type="submit">CREATE NEW ITEM</input>
       </form>
+      <Link to={`/transactions/${index}`}>
+        <button>BACK</button>
+      </Link>
     </div>
   );
 }

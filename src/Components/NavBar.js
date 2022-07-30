@@ -10,7 +10,7 @@ export default function NavBar(){
                 <Link to="/transactions">Kenyetta Transaction</Link>
             {/* </button> */}
             <button className="new-button">
-                <Link to="/transaction/new">NEW TRANSACTION</Link>
+                <Link to="/transactions/new">NEW TRANSACTION</Link>
             </button>
         </nav>
     );
