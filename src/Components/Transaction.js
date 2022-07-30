@@ -9,7 +9,7 @@ function Transaction({ transaction, index }) {
 
         <Link to={`/transactions/${index}`}>{transaction.item_name} </Link>
 
-        <h3>{transaction.amount}</h3>
+        <h3>${transaction.amount}</h3>
 
       </li>
       {/* <li>{transaction.date}<br></br>{transaction.item_name}<br></br>{transaction.amount}</li> */}

@@ -29,19 +29,19 @@ function TransactionDetails() {
   };
 
   return (
-    <div>
+    <div className="list">
       <h3>{transaction.item_name}</h3>
       <h3>{transaction.date}</h3>
-      <h3>{transaction.amount}</h3>
+      <h3>${transaction.amount}</h3>
       <h3>{transaction.from}</h3>
       <h3>{transaction.category}</h3>
       <Link to={`/transactions`}>
-        <button>Back</button>
+        <button className="back-button">Back</button>
       </Link>
       <Link to={`/transactions/${index}/edit`}>
-        <button>Edit</button>
+        <button className="edit-button">Edit</button>
       </Link>
-      <button onClick={handleDelete}>Delete</button>
+      <button className="delete-button" onClick={handleDelete}>Delete</button>
     </div>
   );
 }

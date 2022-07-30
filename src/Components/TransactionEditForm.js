@@ -54,10 +54,11 @@ function TransactionEditForm() {
 
   return (
     <div className="edit">
+    <fieldset>
       <h1>Edit Transaction</h1>
       <form onSubmit={handleSubmit}>
         <h2>Add a new item</h2>
-        <label>Date</label>
+        <h3>Date</h3>
         <input
           id="date"
           value={transaction.date}
@@ -65,7 +66,7 @@ function TransactionEditForm() {
           placeholder="Date"
           onChange={handleTextChange}
         />
-        <label>Name</label>
+        <h3>Name</h3>
         <input
           id="item_name"
           value={transaction.item_name}
@@ -73,7 +74,7 @@ function TransactionEditForm() {
           placeholder="Name"
           onChange={handleTextChange}
         />
-        <label>Amount</label>
+        <h3>Amount</h3>
         <input
           id="amount"
           value={transaction.amount}
@@ -81,7 +82,7 @@ function TransactionEditForm() {
           placeholder="Amount"
           onChange={handleNumberChange}
         />
-        <label>From</label>
+        <h3>From</h3>
         <input
           id="from"
           value={transaction.category}
@@ -90,11 +91,12 @@ function TransactionEditForm() {
           onChange={handleTextChange}
         />
         <br />
-        <input type="submit">CREATE NEW ITEM</input>
+        <input type="submit">UPDATE ITEM</input>
       </form>
       <Link to={`/transactions/${index}`}>
         <button>BACK</button>
       </Link>
+      </fieldset>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 
-{/* NavBar visible on all pages link to transactions INDEX  and Form for New transaction*/}
 export default function NavBar(){
     return (
         <nav className="navbar">
@@ -9,7 +8,7 @@ export default function NavBar(){
                 <Link to="/transactions">TRANSACTIONS</Link>
             </button>
             <button className="new-button">
-                <Link to="/transactions/new">NEW TRANSACTION</Link>
+                <Link to="/transactions/new">NEW</Link>
             </button>
         </nav>
     );

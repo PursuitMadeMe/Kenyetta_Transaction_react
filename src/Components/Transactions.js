@@ -38,7 +38,6 @@ function Transactions() {
           </thead>
           <tbody>
             {transactions.map((transaction, index) => {
-              {/* console.log(transaction) */}
               return <Transaction key={index} transaction={transaction} index={index} />;
             })}
           </tbody>
