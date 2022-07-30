@@ -1,0 +1,57 @@
+.navbar {
+    background-image: "/Users/kenyettagriffin/Desktop/Module 4/Kenyetta_Transaction_react/public/istockphoto-468973723-612x612.jpg";
+    background-color: rgb(99, 188, 151);
+    height: 200px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+
+    margin: auto;
+  }
+  
+  h1 {
+    
+    justify-content: flex;
+    padding-left: 50px;
+  }
+  
+  .transaction-button {
+    margin-top: 10px;
+    margin-left: 75px;
+    background-color: rgb(46, 208, 113);
+    border: 1px solid;
+    font-style: bold;
+    height: 50px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  
+  .new-button {
+    background: rgb(46, 208, 113);
+    justify-content: end;
+    margin-top: 10px;
+    margin-left: 75px;
+    border: 1px solid;
+    font-style: bold;
+    height: 50px;
+    width: 200px;
+    
+  }
+  
+  input{
+      width: 205px;
+      border-radius: 25px;
+      height: 25px;
+      justify-content: center;
+      border: solid;
+  }
+
+  .new{
+      height: 500px;
+      background-color: rgb(204, 204, 218);
+  }
+
+  h2{
+      color: blueviolet;
+  }

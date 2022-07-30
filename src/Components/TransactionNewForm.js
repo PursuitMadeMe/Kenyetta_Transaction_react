@@ -42,7 +42,7 @@ function TransactionNewForm() {
   };
 
   return (
-    <div className="new">
+    <div class="row"className="new">
       <form onSubmit={handleSubmit} >
           <label>Add a new item</label>
           <label>Date</label>
