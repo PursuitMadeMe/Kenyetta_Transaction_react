@@ -19,17 +19,6 @@ function TransactionEditForm() {
     category: "",
   });
 
-  const handleTextChange = (event) => {
-    setTransaction({ ...transaction, [event.target.id]: event.target.value });
-  };
-
-  const handleNumberChange = (event) => {
-    setTransaction({
-      ...transaction,
-      [event.target.id]: Number(event.target.value),
-    });
-  };
-
   useEffect(() => {
     axios
       .get(`${API_URL}/transactions/${index}`)
@@ -47,6 +36,17 @@ function TransactionEditForm() {
       .catch((error) => console.error(error));
   };
 
+  const handleTextChange = (event) => {
+    setTransaction({ ...transaction, [event.target.id]: event.target.value });
+  };
+
+  const handleNumberChange = (event) => {
+    setTransaction({
+      ...transaction,
+      [event.target.id]: Number(event.target.value),
+    });
+  };
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     updateTransaction();
@@ -57,7 +57,7 @@ function TransactionEditForm() {
     <fieldset>
       <h1>Edit Transaction</h1>
       <form onSubmit={handleSubmit}>
-        <h2>Add a new item</h2>
+        {/* <h2>Add a new item</h2> */}
         <h3>Date</h3>
         <input
           id="date"
@@ -91,8 +91,11 @@ function TransactionEditForm() {
           onChange={handleTextChange}
         />
         <br />
-        <input type="submit">UPDATE ITEM</input>
+        <br></br>
+        {/* change the input closing tag to <input /> instead of <input></input> */}
+        <input type="submit"UPDATE ITEM/>
       </form>
+      <br></br>
       <Link to={`/transactions/${index}`}>
         <button>BACK</button>
       </Link>
