@@ -18,7 +18,7 @@ function TransactionDetails() {
       .catch(() => {
         navigate("/not-found");
       });
-  }, [index]);
+  }, [index, navigate]);
 
 
   const handleDelete = () => {

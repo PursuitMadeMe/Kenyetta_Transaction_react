@@ -35,7 +35,7 @@ function TransactionEditForm() {
       .get(`${API_URL}/transactions/${index}`)
       .then((res) => setTransaction(res.data))
       .catch((error) => console.error(error));
-  }, []);
+  }, [index]);
 
   const updateTransaction = () => {
     axios
