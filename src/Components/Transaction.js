@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
+// import budget from "./Images/budget.jpg"
 
 function Transaction({ transaction, index }) {
+// const imgUrl = budget;
+
   return (
     <div className="Transaction">
+
+    
       {/* <ul>{`/transactions/${index}`}</ul> */}
       <li>
         <h3>{transaction.date}</h3>

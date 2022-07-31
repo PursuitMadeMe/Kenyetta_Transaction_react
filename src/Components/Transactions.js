@@ -19,10 +19,7 @@ function Transactions() {
     axios
       .get(`${API_URL}/transactions`)
     // set the axios response to the updated list of transactions data
-      .then((res) => {
-        console.log(res)
-        setTransactions(res.data);
-      })
+      .then((res) =>  setTransactions(res.data))
     // set an error message if you don't get a dynamic list of transactions
       .catch((err) => console.error(err));
   }, []);

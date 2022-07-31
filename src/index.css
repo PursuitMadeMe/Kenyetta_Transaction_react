@@ -27,7 +27,9 @@
     width: 200px;
     text-align: center;
   }
-  
+  /* .Transaction{
+    background-image: url("./Components/Images/budget.jpg");
+  } */
   
   .new-button {
     background: rgb(46, 208, 113);
@@ -44,14 +46,15 @@
   input{
       width: 205px;
       border-radius: 25px;
+      border-color: greenyellow;
       height: 25px;
       justify-content: center;
       border: solid;
   }
 
   .new{
-      height: 510px;
-      background-color: rgb(204, 204, 218);
+      height: 520px;
+      background-color: rgb(107, 192, 135);
   }
 
   h2{
@@ -63,7 +66,7 @@
 
   body{
     background-color: aqua;
-    background-image: "/Users/kenyettagriffin/Desktop/Module 4/Kenyetta_Transaction_react/public/istockphoto-468973723-612x612.jpg";
+    background-image: url("./Components/Images/Budget3.webp");
   }
 
   .back-button{
