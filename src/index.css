@@ -12,6 +12,7 @@
   h1 {
     
     justify-content: flex;
+    color: rgb(199, 125, 29);
     padding-left: 50px;
     font-family: 'Edu VIC WA NT Beginner', cursive;
 
@@ -58,7 +59,7 @@
   }
 
   h2{
-      color: blueviolet;
+      color: rgb(199, 125, 29);
       text-align: center;
       font-family: 'Edu VIC WA NT Beginner', cursive;
 
