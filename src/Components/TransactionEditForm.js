@@ -89,10 +89,11 @@ function TransactionEditForm() {
           type="text"
           placeholder="From"
           onChange={handleTextChange}
+          // I dont know why I can't edit the from section ---------------------------------------------
         />
         <br />
         <br></br>
-        {/* change the input closing tag to <input /> instead of <input></input> */}
+        {/* change the input closing tag to <input /> instead of <input></input> ------------ FIX */}
         <input type="submit"UPDATE ITEM/>
       </form>
       <br></br>
