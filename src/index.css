@@ -21,7 +21,7 @@
   .transaction-button {
     margin-top: 10px;
     margin-left: 75px;
-    background-color: rgb(46, 208, 113);
+    background: rgb(46, 208, 113);
     border: 1px solid;
     font-style: bold;
     height: 50px;
@@ -54,8 +54,9 @@
   }
 
   .new{
-      height: 520px;
-      background-color: rgb(107, 192, 135);
+      height: 520px;    
+      background: rgb(46, 208, 113);
+
   }
 
   h2{
