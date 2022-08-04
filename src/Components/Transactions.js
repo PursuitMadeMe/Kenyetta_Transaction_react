@@ -15,30 +15,28 @@ function Transactions() {
 
   // useEffect to axios(fetch) URL Index(list) of transactions
   useEffect(() => {
-
     axios
       .get(`${API_URL}/transactions`)
-    // set the axios response to the updated list of transactions data
-      .then((res) =>  setTransactions(res.data))
-    // set an error message if you don't get a dynamic list of transactions
+      // set the axios response to the updated list of transactions data
+      .then((res) => setTransactions(res.data))
+      // set an error message if you don't get a dynamic list of transactions
       .catch((err) => console.error(err));
   }, []);
 
   return (
     <div className="Transactions">
-    <h1>Bank Account Total:</h1>
+      <h1>Bank Account Total:</h1>
       <section>
-        <table>
-          <thead>
-            <tr>
-            </tr>
-          </thead>
-          <tbody>
-            {transactions.map((transaction, index) => {
-              return <Transaction key={index} transaction={transaction} index={index} />;
-            })}
-          </tbody>
-        </table>
+
+          {transactions.map((transaction, index) => {
+            return (
+              <Transaction
+                key={index}
+                transaction={transaction}
+                index={index}
+              />
+            );
+          })}
       </section>
     </div>
   );

@@ -5,20 +5,18 @@ function Transaction({ transaction, index }) {
 // const imgUrl = budget;
 
   return (
-    <div className="Transaction">
+    <>
 
     
       {/* <ul>{`/transactions/${index}`}</ul> */}
-      <li>
-        <h3>{transaction.date}</h3>
+        <p>{transaction.date}</p>
 
-        <Link to={`/transactions/${index}`}>{transaction.item_name} </Link>
+        <p><Link to={`/transactions/${index}`}>{transaction.item_name} </Link></p>
 
-        <h3>${transaction.amount}</h3>
+        <p>${transaction.amount}</p>
 
-      </li>
       {/* <li>{transaction.date}<br></br>{transaction.item_name}<br></br>{transaction.amount}</li> */}
-    </div>
+      </>
   );
 }
 

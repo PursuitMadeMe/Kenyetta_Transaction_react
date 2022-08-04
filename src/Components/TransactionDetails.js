@@ -15,10 +15,10 @@ function TransactionDetails() {
       .then((res) => {
         setTransaction(res.data);
       })
-      .catch(() => {
+      .catch((error) => {
         navigate("/not-found");
       });
-  }, [index, navigate]);
+  }, [index,]);
 
 
   const handleDelete = () => {
