@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 // import wild card transaction localhost:333/transactions/2
 import Transaction from "./Transaction";
-// import account total component 
+// import account total component
 import AccountTotal from "./AccountTotal";
 
 // npm install axios
@@ -27,18 +27,13 @@ function Transactions() {
 
   return (
     <div className="Transactions">
-    <AccountTotal transactions={transactions} className="total"/>
+      <AccountTotal transactions={transactions} className="total" />
       <section>
-
-          {transactions.map((transaction, index) => {
-            return (
-              <Transaction
-                key={index}
-                transaction={transaction}
-                index={index}
-              />
-            );
-          })}
+        {transactions.map((transaction, index) => {
+          return (
+            <Transaction key={index} transaction={transaction} index={index} />
+          );
+        })}
       </section>
     </div>
   );

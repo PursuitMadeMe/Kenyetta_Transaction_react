@@ -1,4 +1,4 @@
-// import React from 'react'
+import React from 'react'
 
 import { useState } from "react";
 import axios from "axios";
@@ -8,7 +8,9 @@ import { useNavigate } from "react-router-dom";
 const API_URL = process.env.REACT_APP_API_URL;
 
 function TransactionNewForm() {
+
   const [transaction, setTransaction] = useState({
+    
     item_name: "",
     amout: "",
     date: "",
@@ -17,7 +19,6 @@ function TransactionNewForm() {
   });
   const navigate = useNavigate();
 
-  // click on a button take me t
   const addTransaction = () => {
     axios
       .post(`${API_URL}/transactions`, transaction)

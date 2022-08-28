@@ -2,14 +2,15 @@ import { useState, useEffect } from "react";
 
 import { useParams, Link, useNavigate } from "react-router-dom";
 
+import React from 'react'
 import axios from "axios";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
 function TransactionEditForm() {
+  
+  const navigate = useNavigate();
   let { index } = useParams();
-
-  const navigate = useNavigate;
 
   const [transaction, setTransaction] = useState({
     item_name: "",
@@ -24,7 +25,7 @@ function TransactionEditForm() {
       .get(`${API_URL}/transactions/${index}`)
       .then((res) => setTransaction(res.data))
       .catch((error) => console.error(error));
-  }, [index]);
+  }, [index, navigate]);
 
   const updateTransaction = () => {
     axios
