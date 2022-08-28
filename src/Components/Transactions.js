@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 
 // import wild card transaction localhost:333/transactions/2
 import Transaction from "./Transaction";
+// import account total component 
+import AccountTotal from "./AccountTotal";
 
 // npm install axios
 import axios from "axios";
@@ -25,7 +27,7 @@ function Transactions() {
 
   return (
     <div className="Transactions">
-      <h1>Bank Account Total:</h1>
+    <AccountTotal transactions={transactions} className="total"/>
       <section>
 
           {transactions.map((transaction, index) => {
